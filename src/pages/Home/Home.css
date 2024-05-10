@@ -1,0 +1,45 @@
+/* when screen size is less then 768px */
+@media (max-width: 768px) { 
+    #home .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+/*When screen size is more than 768px */
+@media (min-width: 768px) {
+    #home .text {
+        top: 50%;
+        position: relative;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}
+
+#home .text .heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#home .name {
+    font-size: 2.5rem;
+}
+
+#home .text .color {
+    color: var(--primary-color);
+}
+
+#home .role {
+    animation:cubic-bezier(1, 0, 0, 1) 1s 0.5s both slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
