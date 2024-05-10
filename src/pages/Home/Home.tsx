@@ -3,7 +3,7 @@ import Col from "react-bootstrap/Col";
 
 import './Home.css';
 import { useEffect, useState } from "react";
-import image from '../../assets/images/p.png';
+import image from '../../assets/images/p.jpg';
 import Row from "react-bootstrap/Row";
 
 const roleList = ['Full Stack Developer', 'Web Designer', 'Tech Enthusiast'];
@@ -58,11 +58,11 @@ const Home = () => {
     }, []);
 
     return (
-        <section id="home">
+        <section id="home" style={{backgroundColor: 'black'}}>
             <Container>
                 <Row>
                     <Col md={6} xs={12}>
-                        <div className="text">
+                        <div className="text text-white">
                             <span className="heading">Hello</span>
                             <div className="name">I'm <span className="color">Mohd Sabahat</span></div>
                             <div className="d-flex flex-column">
@@ -76,6 +76,7 @@ const Home = () => {
                             <img src={image} className="w-100" alt="Mohd Sabahat" />
                         </div>
                     </Col>
+                    <div className="overlay"></div>
                 </Row>
             </Container>
         </section>

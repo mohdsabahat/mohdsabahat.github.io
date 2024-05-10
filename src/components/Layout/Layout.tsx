@@ -8,7 +8,7 @@ const Layout = () => {
     return (
         <div>
             <NavigationBar />
-            <Container fluid={true} >
+            <Container fluid={true} className="px-0">
                 <Outlet />
             </Container>
         </div>
