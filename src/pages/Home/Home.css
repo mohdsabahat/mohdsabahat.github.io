@@ -6,6 +6,8 @@
         left: 50%;
         transform: translateX(-50%);
         z-index: 2;
+        width: max-content;
+        max-width: 100%;
     }
     #home .overlay {
         /*black color overlay on top of image for text*/
@@ -29,7 +31,7 @@
 }
 
 #home .text .heading {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -40,6 +42,7 @@
 
 #home .text .color {
     color: var(--primary-color);
+    font-weight: 800;
 }
 
 #home .role {
@@ -53,4 +56,23 @@
     100% {
         transform: translateX(0);
     }
+}
+
+.home-about h1{
+    color: var(--primary-color);
+    font-size: 9.5vw;
+    font-weight: 300;
+}
+
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15rem;
+    animation: typing 3.5s steps(40, end) infinite;
+}
+
+@keyframes typing {
+    from { width: 0;}
+    to { width: 100%;}
 }

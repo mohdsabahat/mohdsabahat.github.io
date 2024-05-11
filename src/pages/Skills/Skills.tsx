@@ -2,7 +2,7 @@
 const Skills =() => {
     return (
         <div>
-            <h1>Skills</h1>
+            <h1 className="text-white text-center">Skills - WIP</h1>
             <p>Here are some of my skills:</p>
             <ul>
                 <li>HTML</li>

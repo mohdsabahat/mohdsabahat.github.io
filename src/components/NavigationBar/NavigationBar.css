@@ -1,0 +1,28 @@
+nav.navbar {
+    background-color: black;
+}
+nav.navbar {
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%2893, 63, 211, 0.7%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e")!important;
+}
+nav.navbar .nav-link {
+    color: snow;
+}
+nav.navbar .nav-link.active {
+    color: var(--primary-color);
+}
+
+nav.navbar .nav-link::after {
+    content: "";
+    border-bottom: 2px solid var(--primary-color);
+    display: block;
+    width: 0;
+    transition: width 0.2s ease-in;
+}
+
+nav.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+nav.navbar a.navbar-brand {
+    color: var(--primary-color);
+}
