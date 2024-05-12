@@ -6,12 +6,12 @@ import { Outlet } from "react-router-dom";
 const Layout = () => {
     
     return (
-        <div>
+        <>
             <NavigationBar />
-            <Container fluid={true} className="px-0">
+            {/* <Container fluid={true} className="px-0"> */}
                 <Outlet />
-            </Container>
-        </div>
+            {/* </Container> */}
+        </>
     )
 }
 

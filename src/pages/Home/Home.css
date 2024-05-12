@@ -1,13 +1,13 @@
 /* when screen size is less then 768px */
 @media (max-width: 768px) { 
     #home .text {
-        position: absolute;
-        bottom: 0;
         left: 50%;
-        transform: translateX(-50%);
         z-index: 2;
         width: max-content;
         max-width: 100%;
+    }
+    #home .name {
+        letter-spacing: 2pt;
     }
     #home .overlay {
         /*black color overlay on top of image for text*/
@@ -23,29 +23,33 @@
 @media (min-width: 768px) {
 
     #home .text {
-        top : 50%;
-        position: relative;
-        left: 0;
-        transform: translateY(-50%);
+        left: 35%;
     }
 }
 
-#home .text .heading {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+#home .text {
+    font-family: 'Montserrat';
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
-
 #home .name {
-    font-size: 2.5rem;
+    font-size: 14pt;
+    letter-spacing: 4pt;
+    font-weight: 300;
+    color: #9e9e9e;
 }
 
 #home .text .color {
     color: var(--primary-color);
-    font-weight: 800;
 }
 
 #home .role {
+    letter-spacing: 4pt;
+    font-size: 32pt;
+    font-weight: 700;
+    line-height: 40pt;
     animation:cubic-bezier(1, 0, 0, 1) 1s 0.5s both slideInFromLeft;
 }
 

@@ -1,6 +1,22 @@
+/*Fonts*/
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'), url(./assets/fonts/Montserrat-Regular.ttf) format('truetype');
+}
+
 body {
-  padding-top: 56px;            /* offset for navbar */
-  background-color: #020202!important;  /*Keep background black */
+  /*padding-top: 56px;            offset for navbar */
+  background-color: #0A0A0A!important;  /*Keep background black */
+  font-family: 'Montserrat';
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#root, .App {
+  height: 100%;
+  width: 100%;
 }
 
 :root {
@@ -22,6 +38,10 @@ body {
   --bs-btn-disabled-color: #fff;
   --bs-btn-disabled-bg: #0d6efd;
   --bs-btn-disabled-border-color: #0d6efd;
+}
+
+.navbar-offset {
+  padding-top: calc(56px + 2rem)!important;
 }
 
 /* .App {

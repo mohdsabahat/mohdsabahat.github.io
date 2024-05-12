@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row";
 
 import './Home.css';
 import { useEffect, useState } from "react";
-import image from '../../assets/images/p.jpg';
+import bgImage from '../../assets/images/bg2.png';
 import { ABOUT_PAGE_URL } from "../../utils/constants";
 import { useNavigate } from "react-router-dom";
 
@@ -12,6 +12,16 @@ const roleList = ['Full Stack Developer', 'Web Designer', 'Tech Enthusiast'];
 
 const TIME_FOR_SINGLE_LETTTER = 100;
 const TIME_FOR_SINGLE_ROLE = 2000;
+
+const homeSectionStyles = {
+    background: `url("${bgImage}") no-repeat center center`, 
+    backgroundSize: 'cover',
+    height: '100%',
+    width: '100%',
+    // position: 'relative',
+    overflow: 'hidden',
+    zIndex: '2'
+};
 
 const Home = () => {
     const [myRole, setMyRole] = useState('');
@@ -65,29 +75,22 @@ const Home = () => {
 
     return (
         <>
-        <section id="home" style={{backgroundColor: 'black'}}>
+        <section id="home" style={homeSectionStyles}>
             <Container>
-                <Row className="position-relative">
-                    <Col md={6} xs={12}>
+                <Row>
+                    <Col xs={12} md={12} lg={12}>
                         <div className="text text-white">
-                            <span className="heading">Hello!</span>
-                            <div className="name">I'm <span className="color">Mohd Sabahat</span></div>
-                            <div className="d-flex flex-column">
-                                <span className="fw-bold">And I am a </span>
+                            <div>
                                 <h2 className="role color">{myRole}</h2>
                             </div>
-                        </div>
-                    </Col>
-                    <Col md={6} xs={12}>
-                        <div className="image">
-                            <img src={image} className="w-100" alt="Mohd Sabahat" />
+                            <div className="name">Mohd Sabahat</div>
                         </div>
                     </Col>
                     <div className="overlay"></div>
                 </Row>
             </Container>
         </section>
-        <section className="home-about p-5 d-block d-lg-none">
+        {/* <section className="home-about p-5 d-block d-lg-none">
             <Container>
                 <Row>
                     <Col>
@@ -102,7 +105,7 @@ const Home = () => {
                     </Col>
                 </Row>
             </Container>
-        </section>
+        </section> */}
         </>
     );
 }
