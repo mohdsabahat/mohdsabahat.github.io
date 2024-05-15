@@ -1,0 +1,17 @@
+.project-card {
+    margin-bottom: 3%;
+}
+.project-stats span{
+    margin-right: 5%;
+}
+.project-stats span i.fas {
+    color: var(--primary-color-600);
+}
+.project-card button.btn {
+    background-color: var(--primary-color-500);
+    border-color: var(--primary-color-500);
+    color: #000000;
+}
+.project-card .language {
+    font-size: 14px;
+}

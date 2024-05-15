@@ -15,15 +15,20 @@ interface AboutInfo {
     email: string,
     phone: {countryCode: string, number: string}[]
 }
-const aboutInfo = {
+export const aboutInfo = {
     firstName: 'Mohd',
     lastName: 'Sabahat',
     address: '206, Rabri Tola, Old City',
     city: 'Bareilly',
+    country: 'India',
     state: 'UP',
     pinCode: 243005,
     email: 'mohdsabahat123@gmail.com',
-    phone: [{countryCode: '91', number: '8171556909'},{countryCode: '91', number: '9412067348'}]
+    phone: [{countryCode: '91', number: '8171556909'},{countryCode: '91', number: '9412067348'}],
+    socials: { 
+        github: 'https://www.github.com/mohdsabahat',
+        linkedin: 'https://www.linkedin.com/in/mohd-sabahat'
+    }
 }
 
 const About = () => {
@@ -31,7 +36,7 @@ const About = () => {
         <section id="about">
             <Container className="navbar-offset">
                 <div className="page-title">
-                  <h2>About <span>Me</span></h2>
+                  <h2>About <span className="dots color-text">Me</span></h2>
                 </div>
                 <Row className="g-5">
                     <Col xs={12} md={6} lg={6} >
