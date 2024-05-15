@@ -1,0 +1,5 @@
+#contact button.btn {
+    background-color: var(--primary-color-500);
+    border-color: var(--primary-color-500);
+    color: #000000;
+}
