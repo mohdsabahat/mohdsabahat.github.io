@@ -1,0 +1,28 @@
+.sort-btn {
+    cursor: pointer;
+}
+.sort-btn .fa-sort-up {
+    bottom: 30%;
+    position: absolute;
+}
+
+.sort-btn .fa-sort-down {
+    top: 30%;
+    position: absolute;
+}
+
+.sort-btn::before, .sort-btn::after {
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    display: block;
+    opacity: .125;
+    right: 10px;
+    line-height: 9px;
+}
+
+/* highlight the sort button icon which has been clicked*/
+.sort-btn.active-asc .fa-sort-up, .sort-btn.active-desc .fa-sort-down{
+    color: var(--primary-color-500);
+}

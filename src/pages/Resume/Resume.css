@@ -1,0 +1,90 @@
+#resume {
+    color:  snow;
+    font-size:  1.15rem;
+}
+#resume h3 {
+    font-size: 26px;
+}
+
+.timeline .timeline-item {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding-bottom: 15px;
+}
+
+.timeline-item .left-part {
+    width: 30%;
+    display: table-cell;
+    padding-right: 25px;
+    min-height: 100%;
+    text-align: right;
+    vertical-align: top;
+}
+.timeline-item .item-time-period {
+    color: #aaa;
+    margin: 3px 0;
+    font-size: 14px;
+    line-height: 1.4em;
+}
+.timeline-item .item-company {
+    display: block;
+    margin: 0 0 4px;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.45em;
+    color: #a5a6a7;
+}
+
+.timeline-item .divider {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    bottom: 0;
+    width: 1px;
+    background-color: #444;
+}
+.timeline-item .divider:before {
+    content: '';
+    display: block;
+    position: absolute;
+    margin-top: 4px;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    margin-left: -8px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    opacity: .25;
+    z-index: 0;
+}
+.timeline-item .divider:after {
+    content: '';
+    display: block;
+    position: absolute;
+    margin-top: 8px;
+    width: 9px;
+    height: 9px;
+    margin-left: -4px;
+    background-color: #222;
+    border-radius: 5px;
+    border: 2px solid var(--primary-color);
+    z-index: 1;
+}
+
+.timeline-item .item-title {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+.timeline-item .right-part {
+    width: 70%;
+    display: table-cell;
+    padding-left: 25px;
+    padding-right: 15px;
+    vertical-align: top;
+}
+
+.timeline-item .right-part p{
+    font-size: 0.7em;
+}
