@@ -30,7 +30,7 @@ const NavigationBar = () => {
                         <CustomNavLink to="/">Home</CustomNavLink>
                         <CustomNavLink to="/about">About</CustomNavLink>
                         <CustomNavLink to="/resume">Resume</CustomNavLink>
-                        <CustomNavLink to="/skills">Skills</CustomNavLink>
+                        <CustomNavLink to="/projects">Projects</CustomNavLink>
                         <CustomNavLink to="/contact">Contact</CustomNavLink>
                     </Nav>
                 </Navbar.Collapse>

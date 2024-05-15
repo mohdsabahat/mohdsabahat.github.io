@@ -4,10 +4,20 @@
   src: local('Montserrat'), url(./assets/fonts/Montserrat-Regular.ttf) format('truetype');
 }
 
+:root {
+  --primary-color: #5d3fd3;
+  --primary-color-500: #ac91e9;
+  --primary-color-600: #BEA7ED;
+  --app-body-color: #16121E;
+  --mixed-200: #2b2833;
+  --bs-body-color: snow!important;
+  --bs-body-bg: #2b2833!important;
+}
+
 body {
   /*padding-top: 56px;            offset for navbar */
-  background-color: #0A0A0A!important;  /*Keep background black */
-  font-family: 'Montserrat';
+  background-color: var(--app-body-color)!important; 
+  font-family: 'Montserrat'!important;
 }
 html, body {
   height: 100%;
@@ -19,8 +29,22 @@ html, body {
   width: 100%;
 }
 
-:root {
-  --primary-color: #5d3fd3;
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
 }
 
 .btn-custom-primary {
@@ -42,6 +66,46 @@ html, body {
 
 .navbar-offset {
   padding-top: calc(56px + 2rem)!important;
+}
+
+.card {
+  --bs-card-bg: var(--mixed-200)!important;
+  --bs-card-title-color: snow!important;
+  --bs-card-color: #9b98a1!important;
+}
+
+.progress {
+  --bs-progress-bg: var(--mixed-200)!important;
+  --bs-progress-bar-color: var(--mixed-200)!important;
+  --bs-progress-bar-bg: var(--primary-color-500)!important;
+}
+
+.color-text {
+  color: var(--primary-color-600);
+}
+.page-title {
+  display: inline-block;
+  position: relative;
+  padding-right: 25px;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+.dots::after {
+  position: absolute;
+  opacity: .45;
+  top: 10px;
+  right: 0;
+  content: '';
+  height: 30px;
+  width: 50px;
+  background-image: -webkit-repeating-radial-gradient(center center,var(--primary-color), var(--primary-color) 1px,transparent 0px,transparent 100%);
+  /* background-image: -moz-repeating-radial-gradient(center center,#04b4e0,#04b4e0 1px,transparent 0px,transparent 100%);
+  background-image: -ms-repeating-radial-gradient(center center,#04b4e0,#04b4e0 1px,transparent 0px,transparent 100%);
+  -webkit-background-size: 6px 6px;
+  -moz-background-size: 6px 6px; */
+  background-size: 6px 6px;
+  z-index: -1;
 }
 
 /* .App {
