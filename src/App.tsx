@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {HashRouter, Routes, Route} from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 
 import './App.css';
@@ -16,7 +16,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const App = () => {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <Toaster />
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -27,8 +27,8 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
-      </BrowserRouter>
-      {/* <ThemeSwitch /> */}
+      </HashRouter>
+      <ThemeSwitch />
     </div>
   );
 }
