@@ -20,7 +20,6 @@ const Projects =() => {
     useEffect(() => {
         const projects = localStorageUtils.getFromLocalStorage('projects');
 
-        console.log('projects from local storage : ', projects);
         if(projects){
             // use settimeoout to show loading for 1 sec
             setTimeout(() => {

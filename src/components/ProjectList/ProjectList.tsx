@@ -56,7 +56,7 @@ const ProjectList = ({projects, setProjects}:any) => {
     return (
         <Row>
             <Col xs={12} md={12} lg={12}>
-                <div className='d-flex mb-4'>
+                <div className='d-flex mb-4 me-3'>
                     <div className="d-flex ms-auto align-items-center position-relative">
                         <Form.Select size="sm" onChange={sortProjects} ref={selectEl}> 
                             <option hidden value="1">Sort By</option>
