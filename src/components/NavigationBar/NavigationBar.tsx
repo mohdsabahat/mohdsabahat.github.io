@@ -7,12 +7,12 @@ import './NavigationBar.css';
 import React from "react";
 
 interface CustomNavLinkProps extends NavLinkProps {
-    activeClassName?: string
+    eventKey?: string
 }
 
-const CustomNavLink: React.FC<CustomNavLinkProps> = ({to, className, children, ...rest}) =>{
+const CustomNavLink: React.FC<CustomNavLinkProps> = ({to, className, children, eventKey, ...rest}) =>{
     return (
-        <Nav.Link as={ReactRouterNavLink} to={to} {...rest}
+        <Nav.Link as={ReactRouterNavLink} to={to} {...rest} eventKey={eventKey}
             style={{}}>
             {children as React.ReactNode}
         </Nav.Link>
@@ -21,17 +21,19 @@ const CustomNavLink: React.FC<CustomNavLinkProps> = ({to, className, children, .
 
 const NavigationBar = () => {
         return (
-        <Navbar expand="md" fixed="top">
+        <Navbar expand="md" fixed="top"
+            collapseOnSelect={true}
+        >
             <Container fluid={true}>
                 {/* <Navbar.Brand as={Link} to="/">Sabahat</Navbar.Brand> */}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className="ms-auto"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto">
-                        <CustomNavLink to="/">Home</CustomNavLink>
-                        <CustomNavLink to="/about">About</CustomNavLink>
-                        <CustomNavLink to="/resume">Resume</CustomNavLink>
-                        <CustomNavLink to="/projects">Projects</CustomNavLink>
-                        <CustomNavLink to="/contact">Contact</CustomNavLink>
+                        <CustomNavLink to="/" eventKey="1">Home</CustomNavLink>
+                        <CustomNavLink to="/about" eventKey="2">About</CustomNavLink>
+                        <CustomNavLink to="/resume" eventKey="3">Resume</CustomNavLink>
+                        <CustomNavLink to="/projects" eventKey="4">Projects</CustomNavLink>
+                        <CustomNavLink to="/contact" eventKey="5">Contact</CustomNavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
