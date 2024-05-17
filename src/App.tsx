@@ -1,4 +1,3 @@
-import React from 'react';
 import {HashRouter, Routes, Route} from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 
@@ -8,8 +7,8 @@ import About from './pages/About/About';
 import Resume from './pages/Resume/Resume';
 import Projects from './pages/Projects/Projects';
 import Contact from './pages/Contact/Contact';
-import ThemeSwitch from './components/ThemeSwitch/ThemeSwitch';
 import Home from './pages/Home/Home';
+import PageSwitchButton from './components/PageSwitchButton/PageSwitchButton';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -17,7 +16,9 @@ const App = () => {
   return (
     <div className="App">
       <HashRouter>
-        <Toaster />
+        <Toaster 
+          position='top-right'
+        />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home />} />
@@ -27,8 +28,9 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
+        <PageSwitchButton />
       </HashRouter>
-      <ThemeSwitch />
+      {/* <ThemeSwitch /> */}
     </div>
   );
 }
