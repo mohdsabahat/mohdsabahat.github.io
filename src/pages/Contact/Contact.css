@@ -3,3 +3,11 @@
     border-color: var(--primary-color-500);
     color: #000000;
 }
+#contact .card .icon {
+    color: var(--primary-color-500);
+    font-size: 32px;
+}
+#contact .card .icon-text a {
+    font-size: 14px;
+    color: var(--bs-card-color);
+}

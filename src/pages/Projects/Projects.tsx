@@ -9,6 +9,7 @@ import ProjectList from "../../components/ProjectList/ProjectList";
 import { ProjectType } from "../../components/Project/Project";
 
 import './Projects.css';
+import { toastStyles } from "../../utils/toastStyles";
 
 const GITHUB_USERNAME = 'mohdsabahat';
 
@@ -41,10 +42,10 @@ const Projects =() => {
                     );
                     setProjects(filteredProjects);
                     localStorageUtils.saveToLocalStorage('projects', JSON.stringify(filteredProjects));
-                    toast.success('Projects fetched successfully');
+                    toast.success('Projects fetched successfully', toastStyles.dark);
                 }).catch((error) => {
                     console.error('Error fetching projects : ', error);
-                    toast.error('Failed to fetch Github projects');
+                    toast.error('Failed to fetch Github projects', toastStyles.dark);
                 }).finally(() => {
                     setIsLoading(false);
                 });
@@ -57,13 +58,6 @@ const Projects =() => {
             <div className="text-center">
                 <h3>No projects found</h3>
             </div>
-        )
-    }
-
-    const showErrorToast = () => {
-        toast.error('Failed to fetch Github projects');
-        return (
-            <h3 className="text-center">Error fetching projects</h3>
         )
     }
 

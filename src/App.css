@@ -66,6 +66,7 @@ html, body {
 
 .navbar-offset {
   padding-top: calc(56px + 2rem)!important;
+  padding-bottom: 65px;
 }
 
 .card {

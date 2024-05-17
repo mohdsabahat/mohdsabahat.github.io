@@ -1,9 +1,12 @@
 import Form from "react-bootstrap/Form";
+import { FormControlProps } from "react-bootstrap";
 import { findInputError, isFormInvalid } from "../../utils/formUtils";
 
 import { useFormContext } from "react-hook-form";
 
-interface FormInputProps {
+import './FormInput.css';
+
+interface FormInputProps extends FormControlProps {
     label: string;
     type?: string;
     controlId: string;

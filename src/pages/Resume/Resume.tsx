@@ -81,7 +81,7 @@ const Resume = () => {
                         </div>
                     </Col>
                 </Row>
-                <Row className="mt-4 pb-4">
+                <Row className="mt-4">
                     {/* Skills section */}
                     <Col>
                         <div className='d-flex'>

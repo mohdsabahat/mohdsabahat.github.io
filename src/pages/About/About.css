@@ -17,7 +17,7 @@
     margin-bottom: 10px;
 }
 #about .about-list .title{
-    color: var(--primary-color);
+    color: var(--primary-color-500);
     margin-right: 1rem;
     font-weight: 700;
     text-wrap: nowrap;

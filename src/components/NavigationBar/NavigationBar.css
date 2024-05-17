@@ -1,9 +1,6 @@
 nav.navbar {
     background-color: var(--app-body-color);
 }
-nav.navbar {
-    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%2893, 63, 211, 0.7%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e")!important;
-}
 nav.navbar .nav-link {
     color: snow;
 }
@@ -28,3 +25,134 @@ nav.navbar .nav-link:hover::after {
 nav.navbar a.navbar-brand {
     color: var(--primary-color-500);
 }
+
+/* nav toggle btn */
+.navbar-toggler:focus {
+    box-shadow: none!important;
+}
+.toggle-btn {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .toggle-btn span {
+    display: block;
+    width: 100%;
+    box-shadow: 0 2px 10px 0 rgba(0,0,0,0.3);
+    border-radius: 3px;
+    height: 2px;
+    background: var(--primary-color-500);
+    transition: all .3s;
+    position: relative;
+  }
+  
+  .toggle-btn span + span {
+    margin: 6px 0;
+  }
+  
+  .toggle-btn.active span:nth-child(1) {
+    animation: ease .5s top forwards;
+  }
+  
+  .toggle-btn.not-active span:nth-child(1) {
+    animation: ease .5s top-2 forwards;
+  }
+  
+  .toggle-btn.active span:nth-child(2) {
+    animation: ease .5s scaled forwards;
+  }
+  
+  .toggle-btn.not-active span:nth-child(2) {
+    animation: ease .5s scaled-2 forwards;
+  }
+  
+  .toggle-btn.active span:nth-child(3) {
+    animation: ease .5s bottom forwards;
+  }
+  
+  .toggle-btn.not-active span:nth-child(3) {
+    animation: ease .5s bottom-2 forwards;
+  }
+  
+  @keyframes top {
+    0% {
+      top: 0;
+      transform: rotate(0);
+    }
+    50% {
+      top: 10px;
+      transform: rotate(0);
+    }
+    100% {
+      top: 10px;
+      transform: rotate(45deg);
+    }
+  }
+  
+  @keyframes top-2 {
+    0% {
+      top: 10px;
+      transform: rotate(45deg);
+    }
+    50% {
+      top: 10px;
+      transform: rotate(0deg);
+    }
+    100% {
+      top: 0;
+      transform: rotate(0deg);
+    }
+  }
+  
+  @keyframes bottom {
+    0% {
+      bottom: 0;
+      transform: rotate(0);
+    }
+    50% {
+      bottom: 10px;
+      transform: rotate(0);
+    }
+    100% {
+      bottom: 10px;
+      transform: rotate(135deg);
+    }
+  }
+  
+  @keyframes bottom-2 {
+    0% {
+      bottom: 10px;
+      transform: rotate(135deg);
+    }
+    50% {
+      bottom: 10px;
+      transform: rotate(0);
+    }
+    100% {
+      bottom: 0;
+      transform: rotate(0);
+    }
+  }
+  
+  @keyframes scaled {
+    50% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  
+  @keyframes scaled-2 {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

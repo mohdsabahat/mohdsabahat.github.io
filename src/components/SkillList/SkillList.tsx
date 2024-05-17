@@ -6,6 +6,7 @@ import Skill, { skillType } from '../Skill/Skill';
 import './SkillList.css';
 import { localStorageUtils } from '../../utils/localstorage';
 import toast from 'react-hot-toast';
+import { toastStyles } from '../../utils/toastStyles';
 
 const SPREADSHEET_ID = '1HwsoZ_bCfIo9UgcRr9b2kYZS_njxCfIzaJqmnLhuneM';
 
@@ -51,7 +52,7 @@ const SkillList = () => {
             })
             .catch((error) => {
                 console.error('Error fetching skills : ', error);
-                toast.error('Failed to fetch latest skills');
+                toast.error('Failed to fetch latest skills', toastStyles.dark);
             })
             .finally(() => {
                 // set loading to false

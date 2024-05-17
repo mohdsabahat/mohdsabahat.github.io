@@ -20,14 +20,17 @@ const Contact = () => {
                     <Col xs={12} md={4}>
                         <Card className="mb-2">
                             <Card.Body className="align-self-center">
-                                <span className="fas fa-map-marker-alt me-2"  style={{fontSize: '32px'}}></span>
-                                <span> Delhi, {aboutInfo.country}</span>
+                                <div className="d-flex flex-column">
+                                    <span className="fas fa-map-marker-alt mx-auto mb-2 icon"></span>
+                                    <span className="mx-auto  icon-text"> Delhi, {aboutInfo.country}</span>
+                                </div>
                             </Card.Body>
                         </Card>
                         <Card className="mb-2">
                             <Card.Body className="align-self-center">
-                                <span className="fas fa-phone me-2" style={{fontSize: '32px'}}></span>
-                                <span>
+                                <div className="d-flex flex-column">
+                                <span className="fas fa-phone  mx-auto mb-2 icon"></span>
+                                <span className="mx-auto  icon-text">
                                     <a 
                                         className="text-decoration-none"
                                         href={`tel:${aboutInfo.phone[0].countryCode}${aboutInfo.phone[0].number}`}
@@ -35,12 +38,14 @@ const Contact = () => {
                                         +{aboutInfo.phone[0].countryCode} {aboutInfo.phone[0].number}
                                     </a>
                                 </span>
+                                </div>
                             </Card.Body>
                         </Card>
                         <Card className="mb-2">
                             <Card.Body className="align-self-center">
-                                <span className="fas fa-envelope me-2" style={{fontSize: '32px'}}></span>
-                                <span>
+                                <div className="d-flex flex-column">
+                                <span className="fas fa-envelope mx-auto mb-2 icon"></span>
+                                <span className="mx-auto  icon-text">
                                     <a 
                                         className="text-decoration-none"
                                         href={`mailto:${aboutInfo.email}`}
@@ -48,12 +53,14 @@ const Contact = () => {
                                         {aboutInfo.email}
                                     </a>
                                 </span>
+                                </div>
                             </Card.Body>
                         </Card>
                         <Card className="mb-2">
                             <Card.Body className="align-self-center">
-                                <span className="fab fa-github me-2" style={{fontSize: '32px'}}></span>
-                                <span>
+                                <div className="d-flex flex-column">
+                                <span className="fab fa-github mx-auto mb-2 icon"></span>
+                                <span className="mx-auto  icon-text">
                                     <a 
                                         className="text-decoration-none"
                                         href={`${aboutInfo.socials.github}`}
@@ -61,12 +68,14 @@ const Contact = () => {
                                         Github
                                     </a>
                                 </span>
+                                </div>
                             </Card.Body>
                         </Card>
                         <Card className="mb-2">
                             <Card.Body className="align-self-center">
-                                <span className="fab fa-linkedin me-2" style={{fontSize: '32px'}}></span>
-                                <span> 
+                                <div className="d-flex flex-column">
+                                <span className="fab fa-linkedin mx-auto mb-2 icon"></span>
+                                <span className="mx-auto  icon-text"> 
                                     <a 
                                         className="text-decoration-none"
                                         href={`${aboutInfo.socials.linkedin}`}
@@ -74,6 +83,7 @@ const Contact = () => {
                                         LinkedIn
                                     </a>
                                 </span>
+                                </div>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -86,7 +96,7 @@ const Contact = () => {
                         </Card>
                     </Col>
                 </Row>
-
+                <hr />
                 <div className="mt-3 position-relative" style={{ paddingBottom: '50%'}}
                 >
                     <iframe 
